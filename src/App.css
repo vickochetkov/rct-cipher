@@ -1,32 +1,133 @@
-.App {
-  text-align: center;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+html {
+  font-size: 62.5%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body {
+  font-family: "Tahoma", sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: $color-grey-dark;
+  padding: 3rem;
+  box-sizing: border-box;
+  width: 1300px;
+  border: 1px solid green;
+  margin: 5rem;
+  /* background-color: #4da6ff; */
+}
+
+/* tables */
+
+table {
+  /* border-collapse: collapse; */
+  border: 1px solid green;
+  background-color: #f2f2f2;
+  /* border-spacing: 0rem; */
+}
+
+#display {
+  background-color: #f2f2f2;
+}
+
+th {
+  border: 1px solid green;
+  width: 12rem;
+}
+
+.display {
+  padding: 0 3px 0 3px;
+}
+
+.normalFont {
+  font-size: 3rem;
+  color: #00997a;
+}
+
+.smallFont {
+  color: #d22d2d;
+  font-weight: 700;
+}
+
+button .smallFont:hover {
+  color: gold;
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+.activeTh {
+  background-color: yellow;
+}
+
+/* buttons */
+
+.abc-font {
+  font-size: 3rem;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.abc-font:hover {
+  color: gold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.label {
+  font-size: 2rem;
+  color: #6383a8;
+  width: 20rem;
+  text-align: left;
+  padding-left: .5rem;
+}
+
+.btn {
+  border: none;
+  border-radius: 4px;
+  display: inline-block;
+  height: 36px;
+  line-height: 36px;
+  font-size: 16px;
+  outline: 0;
+  padding: 0 2rem;
+  margin: 0 .5rem;
+  text-transform: uppercase;
+  vertical-align: middle;
+  color: #fff;
+  background-color: #6383a8;
+  text-align: center;
+  letter-spacing: .5px;
+  transition: .2s ease-out;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #6d8cb0
+}
+
+button:focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+}
+
+.btn-abc {
+  font-family: "Tahoma", sans-serif;
+  background-color: black;
+  border-radius: 4px;
+  width: 4.5rem;
+  transition: all .2s ease-in-out;
+  /* transition: .2s ease-out; */
+  cursor: pointer;
+}
+
+.btn-abc:hover {
+  transform: scale(1.1);
+}
+
+.buttons {
+  border: none;
 }
