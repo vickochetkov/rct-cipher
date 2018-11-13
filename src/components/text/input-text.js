@@ -1,14 +1,13 @@
 import React from 'react';
 
-const InputText = () => {
+const InputText = ({ keyNum, curIdx, sourceText }) => {
   // <form onSubmit={this.handleSubmit} >
   return (
-    <form>      
+    <form>
       <input
         className="input-text"
         type={'text'}
         // value={}
-        // placeholder = {'Type Word Here'}
       />
       <button className="btn">Clear</button>
     </form>

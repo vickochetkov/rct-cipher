@@ -1,47 +1,57 @@
 import React, { Component } from 'react';
-// import { abc } from '../constants/abc';
+// import { inputKey } from './input_key';
+import { abc } from '../../constants/abc';
 
-class InputKey extends Component {
+class IndexKey extends Component {
   constructor(props) {
     super(props)
-    this.input = React.createRef()
+
     this.state = {
       kryptoWord: '',
     }
+
+    this.input = React.createRef()
   }
 
-  handleSubmit = e => {
-    e.preventDefault();
-    this.setState({
-      kryptoWord: this.input.current.value
-    })
-  }
-
-  thTag = () => {
-    this.state.kryptoWord
-      .split('')
+  handleSubmit = kryptoWord => {
+    this.setState({kryptoWord});
+    this.props.onKeySubmit(kryptoWord
       .toUpperCase()
-      .map((letter, index) =>
-      <th key={index}>
-        <span className="normalFont" >{letter}</span>
-        <span className="smallFont">{index}</span>
-      </th>
+      .split('')
+      .map(ltr => abc.indexOf(ltr))
+    );
+  }
+
+  thKeyOutput = kryptoWord => {
+    // console.log(kryptoWord);
+    return (
+      kryptoWord
+        .toUpperCase()
+        .split('')
+        .map((letter, index) =>
+        <th key={index}>
+          <span className="normalFont" >{letter}</span>
+          <span className="smallFont">{abc.indexOf(letter)}</span>
+        </th>
+      )
     )
   }
 
   render() {
-    // const { kryptoWord } = this.state
-    // console.log(this.state);
+    const { kryptoWord } = this.state
+
     return (
       <div>
-        <h1>Configuration</h1>
-        <h2>Keyword</h2>
-        <form onSubmit={this.handleSubmit} >
+        <h1>Crypto WORD</h1>
+        <form onSubmit={e =>
+          { e.preventDefault();
+          this.handleSubmit(this.input.current.value) }
+        } >
           <input
             className="input-key"
             type={'text'}
             defaultValue=''
-            placeholder = {'Enter Krypto Key Here'}
+            placeholder = {'Enter Crypto Key Here'}
             ref={this.input}
           />
           <button className="btn" type="submit">Submit</button>
@@ -50,27 +60,13 @@ class InputKey extends Component {
         <table>
           <tbody>
             <tr>
-              <th>
-                <span className="normalFont">N</span>
-                <span className="smallFont">13</span>
-              </th>
-              <th className="activeTh">
-                <span className="normalFont">T</span>
-                <span className="smallFont">19</span>
-              </th>
-              <th>
-                <span className="normalFont">K</span>
-                <span className="smallFont">10</span>
-              </th>
-
-              {/* { this.thTag } */}
+              { this.thKeyOutput(kryptoWord) }
             </tr>
           </tbody>
         </table>
       </div>
     )
   }
-
 }
 
-export default InputKey;
+export default IndexKey;

@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import { Display } from './components/display/display_index';
-import InputKey from './components/key/key_index';
+import IndexKey from './components/key/key_index';
 import Text from './components/text/text_index';
 import './App.css';
 // import
 
 class App extends Component {
   state = {
-    keyNum: [13, 19, 10],
+    keyNum: [15],
     curIdx: null,
-    sourceText: "krypton",
+    sourceText: "second",
   }
 
   render() {
@@ -23,9 +23,9 @@ class App extends Component {
           sourceText={sourceText}
         />
         <br/><hr/><br/>
-        <InputKey
-          keyNum={keyNum}
+        <IndexKey
           curIdx={curIdx}
+          onKeySubmit={keyNum => this.setState({keyNum}) }
         />
         <br/><hr/><br/>
         <Text

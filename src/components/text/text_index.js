@@ -5,16 +5,20 @@ import InputText from './input-text';
 import OutputCipher from './output_cipher';
 // import { abc } from '../../constants/abc';
 
-const Text = () => {
+const Text = ({keyNum, curIdx, sourceText}) => {
 
   return (
     <div>
       <h1>Encoding</h1>
-      <h2>Source Text</h2>
+      {/*<h2>Source Text</h2>*/}
       <br/>
       <Table />
       <br/><hr/><br/>
-      <InputText />
+      <InputText
+        keyNum={keyNum}
+        curIdx={curIdx}
+        sourceText={sourceText}
+      />
       <OutputCipher />
     </div>
   )
