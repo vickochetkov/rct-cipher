@@ -1,14 +1,18 @@
 import React from 'react';
+import { encryptor } from '../../helpers/encryptor';
+import { abc } from '../../constants/abc';
 
-const OutputCipher = () => {
+const OutputCipher = ({sourceText, keyNum}) => {
+  const cipher = encryptor(sourceText, keyNum, abc).join('');
+
   return (
     <div>
       <h2>Cipher Text</h2><br/>
       <input
         className="output"
         type={'text'}
-        // value={}
-        // placeholder = {'Type Word Here'}
+        readOnly
+        value={cipher}
       /><br/>
     </div>
   )

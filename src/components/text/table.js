@@ -1,33 +1,17 @@
-// esversion: 6
 import React from 'react';
-import { abc } from '../../constants/abc';
+// import { abc } from '../../constants/abc';
+import { newAbc } from '../../helpers/new-abc';
+import { abcRow } from '../../helpers/abc-row';
 
-const Table = () => {
-  const thTag = abc    
-    .map((letter, index) =>
-      <th key={index} className="buttons">
-        <button className="btn-abc">
-          <span className="abc-font" >{letter}</span>
-          <span className="smallFont">{index}</span>
-        </button>
-      </th>
-    )
-
+const Table = ({ keyNum, curIdx, onLetterSelect }) => {
   return (
     <table>
       <tbody>
         <tr>
-          { thTag }
+          { abcRow(keyNum, curIdx, onLetterSelect) }
         </tr>
         <tr>
-          <th>
-            <span className="normalFont" >S</span>
-            <span className="smallFont">18</span>
-          </th>
-          <th>
-            <span className="normalFont" >T</span>
-            <span className="smallFont">19</span>
-          </th>
+          { (keyNum.length > 0) && newAbc(keyNum, curIdx) }
         </tr>
       </tbody>
     </table>

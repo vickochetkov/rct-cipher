@@ -28,7 +28,7 @@ export const Key = ({ keyNum, sourceText }) => {
   return (
     <tr>
       <th className="label">Key</th>
-      {keyNum && thKey}
+      {(keyNum.length > 0) && thKey}
     </tr>
   )
 }

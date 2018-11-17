@@ -62,7 +62,7 @@ button .smallFont:hover {
   font-size: 1.5rem;
 }
 
-.activeTh {
+.active-th {
   background-color: yellow;
 }
 

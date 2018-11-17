@@ -30,7 +30,7 @@ export const Calc = ({ keyNum, sourceText }) => {
   return (
     <tr>
       <th className="label">Calculation</th>
-      {keyNum && sourceText && thCalc}
+      {(keyNum.length > 0) && (sourceText.length > 0) && thCalc}
     </tr>
   )
 }

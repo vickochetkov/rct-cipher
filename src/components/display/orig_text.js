@@ -16,7 +16,7 @@ export const OrigText = ({ keyNum, sourceText }) => {
   return (
     <tr>
       <th className="label">Original Text</th>
-      {sourceText && thText}
+      {(sourceText.length > 0) && thText}
     </tr>
   )
 }

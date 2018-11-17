@@ -5,21 +5,28 @@ import InputText from './input-text';
 import OutputCipher from './output_cipher';
 // import { abc } from '../../constants/abc';
 
-const Text = ({keyNum, curIdx, sourceText}) => {
+const Text = ({keyNum, curIdx, sourceText, onClearClick, onLetterSelect}) => {
 
   return (
     <div>
       <h1>Encoding</h1>
       {/*<h2>Source Text</h2>*/}
       <br/>
-      <Table />
+      <Table
+      keyNum={keyNum}
+      curIdx={curIdx}
+      onLetterSelect={onLetterSelect}
+      />
       <br/><hr/><br/>
       <InputText
-        keyNum={keyNum}
-        curIdx={curIdx}
         sourceText={sourceText}
+        /*onInputChange={onInputChange}*/
+        onClearClick={onClearClick}
       />
-      <OutputCipher />
+      <OutputCipher
+        sourceText={sourceText}
+        keyNum={keyNum}
+      />
     </div>
   )
 };

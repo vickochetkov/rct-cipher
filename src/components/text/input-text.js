@@ -1,15 +1,16 @@
 import React from 'react';
 
-const InputText = ({ keyNum, curIdx, sourceText }) => {
-  // <form onSubmit={this.handleSubmit} >
+const InputText = ({ sourceText, onClearClick }) => {
+
   return (
     <form>
       <input
         className="input-text"
         type={'text'}
-        // value={}
+        value={sourceText}
+        readOnly
       />
-      <button className="btn">Clear</button>
+      <button className="btn" onClick={() => onClearClick()} >Clear</button>
     </form>
   )
 }

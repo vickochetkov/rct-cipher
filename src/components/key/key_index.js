@@ -5,16 +5,10 @@ import { abc } from '../../constants/abc';
 class IndexKey extends Component {
   constructor(props) {
     super(props)
-
-    this.state = {
-      kryptoWord: '',
-    }
-
     this.input = React.createRef()
   }
 
   handleSubmit = kryptoWord => {
-    this.setState({kryptoWord});
     this.props.onKeySubmit(kryptoWord
       .toUpperCase()
       .split('')
@@ -22,23 +16,22 @@ class IndexKey extends Component {
     );
   }
 
-  thKeyOutput = kryptoWord => {
-    // console.log(kryptoWord);
+  thKeyOutput = (kryptoNum, curIdx) => {
+    // console.log(curIdx);
     return (
-      kryptoWord
-        .toUpperCase()
-        .split('')
-        .map((letter, index) =>
-        <th key={index}>
-          <span className="normalFont" >{letter}</span>
-          <span className="smallFont">{abc.indexOf(letter)}</span>
+      kryptoNum
+        .map((num, index) =>
+        <th key={index} className={`${index === curIdx && 'active-th'}`} >
+          <span className="normalFont" >{abc[num]}</span>
+          <span className="smallFont">{num}</span>
         </th>
       )
     )
   }
 
   render() {
-    const { kryptoWord } = this.state
+    const { keyNum, curIdx } = this.props;
+    // console.log(curIdx);
 
     return (
       <div>
@@ -60,7 +53,7 @@ class IndexKey extends Component {
         <table>
           <tbody>
             <tr>
-              { this.thKeyOutput(kryptoWord) }
+              { this.thKeyOutput(keyNum, curIdx) }
             </tr>
           </tbody>
         </table>
