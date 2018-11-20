@@ -13,9 +13,10 @@ export const Encrypted = ({ keyNum, sourceText }) => {
   );
 
   return (
-    <tr>
-      <th className="label">Encrypted Text</th>
-      {(keyNum.length > 0) && (sourceText.length > 0) && thEncrypted}
+    <tr className="orange">
+      <th className="lbl">Encrypted Text</th>
+      {(keyNum.length > 0) && (sourceText.length > 0) ? thEncrypted : <th></th>}
+
     </tr>
   )
 }

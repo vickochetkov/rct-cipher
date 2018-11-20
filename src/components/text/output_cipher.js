@@ -6,10 +6,10 @@ const OutputCipher = ({sourceText, keyNum}) => {
   const cipher = encryptor(sourceText, keyNum, abc).join('');
 
   return (
-    <div>
-      <h2>Cipher Text</h2><br/>
+    <div className="box b">
+      <h2>Encrypted Text</h2><br/>
       <input
-        className="output"
+        className={`${(sourceText.length > 0) && 'orange'}`}
         type={'text'}
         readOnly
         value={cipher}

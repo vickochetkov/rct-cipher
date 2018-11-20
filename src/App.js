@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { Display } from './components/display/display_index';
 import IndexKey from './components/key/key_index';
 import Text from './components/text/text_index';
-// import { encryptor } from './helpers/encryptor';
-// import { abc } from './constants/abc';
 import './App.css';
 
 class App extends Component {
@@ -29,7 +27,8 @@ class App extends Component {
 
     return (
       <div>
-        <h1>Visual Cipher</h1><br/>
+        <h1 className="title">Visual Cipher</h1><br/>
+        <h2 className="title-2">Main Display</h2><br/>
         <Display
           keyNum={keyNum}
           sourceText={sourceText}
@@ -52,7 +51,7 @@ class App extends Component {
           onClearClick={this.clearHandle}
           onLetterSelect={letter => this.setState({
             sourceText: sourceText + letter,
-            curIdx: curIndex})
+            curIdx: (curIndex+1)%keyNum.length})
           }
         />
       </div>

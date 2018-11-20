@@ -13,7 +13,7 @@ html {
 body {
   font-family: "Tahoma", sans-serif;
   font-weight: 400;
-  /* font-size: 16px; */
+  /* font-size: 10px; */
   line-height: 1.7;
   color: $color-grey-dark;
   padding: 3rem;
@@ -21,16 +21,40 @@ body {
   width: 1300px;
   border: 1px solid green;
   margin: 5rem;
-  /* background-color: #4da6ff; */
+}
+
+.title {
+  font-size: 4rem;
+  color: #444;
+  text-align: center;
+}
+
+.title-2 {
+  font-size: 2.5rem;
+  color: #6383a8;
+  text-align: center;
+}
+
+input {
+  width: 30rem;
+  height: 2.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.form-holder {
+  text-align: center;
 }
 
 /* tables */
 
 table {
-  /* border-collapse: collapse; */
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom: 5rem;
   border: 1px solid green;
   background-color: #f2f2f2;
-  /* border-spacing: 0rem; */
 }
 
 #display {
@@ -40,10 +64,15 @@ table {
 th {
   border: 1px solid green;
   width: 12rem;
+  height: 5rem;
 }
 
 .display {
   padding: 0 3px 0 3px;
+}
+
+.orange {
+  background-color: orange;
 }
 
 .normalFont {
@@ -77,7 +106,7 @@ button .smallFont:hover {
   color: gold;
 }
 
-.label {
+.lbl {
   font-size: 2rem;
   color: #6383a8;
   width: 20rem;
@@ -106,7 +135,8 @@ button .smallFont:hover {
 }
 
 .btn:hover {
-  background-color: #6d8cb0
+  background-color: #6d8cb0;
+  color: black;
 }
 
 button:focus {
@@ -116,18 +146,67 @@ button:focus {
 
 .btn-abc {
   font-family: "Tahoma", sans-serif;
-  background-color: black;
+  background-color: #444;
   border-radius: 4px;
   width: 4.5rem;
   transition: all .2s ease-in-out;
-  /* transition: .2s ease-out; */
   cursor: pointer;
 }
 
 .btn-abc:hover {
   transform: scale(1.1);
+  background-color: black;
 }
 
 .buttons {
   border: none;
+}
+
+.errMsg {
+  color: red;
+  font-size: 2.5rem;
+}
+
+/* grid */
+.wrapper {
+  width: 60%;
+  margin-left:auto;
+  margin-right:auto;
+  display: grid;
+  grid-gap: 1px;
+  grid-template-columns: [col] 20rem [col] 20rem [col] 20rem [col] 20rem  ;
+  grid-template-rows: [row] auto [row];
+  background-color: #fff;
+  color: #444;
+}
+
+.box {
+  background-color: #444;
+  /* background-color: black; */
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+  /* font-size: 150%; */
+}
+
+.a {
+  grid-column: col / span 2;
+  grid-row: row ;
+}
+
+.b {
+  grid-column: col 3 / span 2 ;
+  grid-row: row ;
+  }
+
+.c {
+  grid-column: col / span 4;
+  grid-row: row 2;
+  height: 6rem;
+}
+
+.clear {
+  width: 50rem;
+  margin-top: .5rem;
 }

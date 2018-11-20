@@ -1,17 +1,17 @@
 import React from 'react';
 
-const InputText = ({ sourceText, onClearClick }) => {
+const InputText = ({ sourceText }) => {
 
   return (
-    <form>
+    <div className="box a">
+      <h2>Original Text</h2><br/>
       <input
-        className="input-text"
         type={'text'}
         value={sourceText}
         readOnly
       />
-      <button className="btn" onClick={() => onClearClick()} >Clear</button>
-    </form>
+      {/*<button className="btn" onClick={() => onClearClick()} >Clear All</button>*/}
+    </div>
   )
 }
 

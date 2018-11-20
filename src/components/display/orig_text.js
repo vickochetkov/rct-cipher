@@ -15,8 +15,8 @@ export const OrigText = ({ keyNum, sourceText }) => {
 
   return (
     <tr>
-      <th className="label">Original Text</th>
-      {(sourceText.length > 0) && thText}
+      <th className="lbl">Original Text</th>
+      {(sourceText.length > 0) ? thText : <th></th> }
     </tr>
   )
 }
