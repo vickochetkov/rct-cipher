@@ -50,7 +50,7 @@ class IndexKey extends Component {
             { e.preventDefault();
             this.handleSubmit(this.input.current.value) }
           } >
-            {this.state.errorMsg && <h3 className="errMsg">Err! Use single word 3-10 <u>characters</u> long instead!</h3>}
+            {this.state.errorMsg && <h3 className="errMsg">Error! Use single word 3-10 <u>characters</u> long instead!</h3>}
             <input
               type={'text'}
               defaultValue=''
