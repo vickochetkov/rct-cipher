@@ -1,4 +1,5 @@
 # Visual Vigenère Cipher
+
 ### The Application encrypts inputed text with help of crypto word using The Vigenère cipher method.
 
 ##### The Vigenère cipher is a method of encrypting alphabetic text by using a series of interwoven Caesar ciphers, based on the letters of a keyword (crypto word). It is a form of polyalphabetic substitution.
@@ -6,8 +7,11 @@
 ##### The action of a Caesar cipher is to replace each plaintext letter with a different one a fixed number of places down the alphabet. In cryptography, a Caesar cipher, also known as Caesar's cipher, the shift cipher, Caesar's code or Caesar shift, is one of the simplest and most widely known encryption techniques. It is a type of substitution cipher in which each letter in the plaintext is replaced by a letter some fixed number of positions down the alphabet. For example, with a left shift of 3, D would be replaced by A, E would become B, and so on. The method is named after Julius Caesar, who used it in his private correspondence.
 
 <hr>
+
 #### The main element of the App is the Main Display table. It makes it easier to understand principal and algorithm of the encryption.
+
 <br>  
+
 #### This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 ## Description
