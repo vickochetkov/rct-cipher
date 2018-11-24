@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Display } from './components/display/display_index';
 import IndexKey from './components/key/key_index';
 import Text from './components/text/text_index';
-import './App.css';
+import './App.scss';
 
 class App extends Component {
   state = {

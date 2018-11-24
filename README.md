@@ -26,14 +26,14 @@
 
 ## User story
 ### Main Display
-1.  The App should show a table with 4 rows in the follow order:
+1.  The App shows a table with 4 rows in the follow order:
       * Original Text  
       * Key
       * Calculation
       * Encrypted Text
-1.  Original Text, Key and Encrypted Text are for letters of relevant words with their alphabet indices. Every letter should have its own cell.
-1.  The Encrypted Text row should be backlighted.
-1.  Calculation is for a visual mathematical representation of the encoding process. It should show how to compute the index of the encrypted letter.  
+1.  Original Text, Key and Encrypted Text are for letters of relevant words with their alphabet indices. Every letter has its own cell.
+1.  The Encrypted Text row is backlighted.
+1.  Calculation is for a visual mathematical representation of the encoding process. It shows how to compute the index of the encrypted letter.  
 
 ### Crypto WORD
 1.  User can see and use a crypto word input element.

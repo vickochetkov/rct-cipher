@@ -1,3 +1,9 @@
+$basic-green: #00997a;
+$basic-grey: #444;
+$basic-blue: #6383a8;
+$basic-red: #d22d2d;
+$basic-white: #fff;
+
 *,
 *::after,
 *::before {
@@ -15,23 +21,22 @@ body {
   font-weight: 400;
   /* font-size: 10px; */
   line-height: 1.7;
-  color: $color-grey-dark;
   padding: 3rem;
   box-sizing: border-box;
   width: 1300px;
-  border: 1px solid green;
+  border: 1px solid $basic-green;
   margin: 5rem;
 }
 
 .title {
   font-size: 4rem;
-  color: #444;
+  color: $basic-grey;
   text-align: center;
 }
 
 .title-2 {
   font-size: 2.5rem;
-  color: #6383a8;
+  color: $basic-blue;
   text-align: center;
 }
 
@@ -53,7 +58,7 @@ table {
   margin-left:auto;
   margin-right:auto;
   margin-bottom: 5rem;
-  border: 1px solid green;
+  border: 1px solid $basic-green;
   background-color: #f2f2f2;
 }
 
@@ -62,7 +67,7 @@ table {
 }
 
 th {
-  border: 1px solid green;
+  border: 1px solid $basic-green;
   width: 12rem;
   height: 5rem;
 }
@@ -77,11 +82,11 @@ th {
 
 .normalFont {
   font-size: 3rem;
-  color: #00997a;
+  color: $basic-green;
 }
 
 .smallFont {
-  color: #d22d2d;
+  color: $basic-red;
   font-weight: 700;
 }
 
@@ -99,7 +104,7 @@ button .smallFont:hover {
 
 .abc-font {
   font-size: 3rem;
-  color: white;
+  color: $basic-white;
 }
 
 .abc-font:hover {
@@ -108,7 +113,7 @@ button .smallFont:hover {
 
 .lbl {
   font-size: 2rem;
-  color: #6383a8;
+  color: $basic-blue;
   width: 20rem;
   text-align: left;
   padding-left: .5rem;
@@ -126,12 +131,14 @@ button .smallFont:hover {
   margin: 0 .5rem;
   text-transform: uppercase;
   vertical-align: middle;
-  color: #fff;
-  background-color: #6383a8;
+  color: $basic-white;
+  background-color: $basic-blue;
   text-align: center;
   letter-spacing: .5px;
   transition: .2s ease-out;
   cursor: pointer;
+
+
 }
 
 .btn:hover {
@@ -140,13 +147,13 @@ button .smallFont:hover {
 }
 
 button:focus {
-    outline: 1px solid #fff;
+    outline: 1px solid $basic-white;
     outline-offset: -4px;
 }
 
 .btn-abc {
   font-family: "Tahoma", sans-serif;
-  background-color: #444;
+  background-color: $basic-grey;
   border-radius: 4px;
   width: 4.5rem;
   transition: all .2s ease-in-out;
@@ -163,7 +170,7 @@ button:focus {
 }
 
 .errMsg {
-  color: red;
+  color: $basic-red;
   font-size: 2.5rem;
 }
 
@@ -176,14 +183,13 @@ button:focus {
   grid-gap: 1px;
   grid-template-columns: [col] 20rem [col] 20rem [col] 20rem [col] 20rem  ;
   grid-template-rows: [row] auto [row];
-  background-color: #fff;
-  color: #444;
+  background-color: $basic-white;
+  color: $basic-grey;
 }
 
 .box {
-  background-color: #444;
-  /* background-color: black; */
-  color: #fff;
+  background-color: $basic-grey;
+  color: $basic-white;
   border-radius: 5px;
   padding: 5px;
   text-align: center;
