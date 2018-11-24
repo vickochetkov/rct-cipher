@@ -6,7 +6,8 @@
 ##### The action of a Caesar cipher is to replace each plaintext letter with a different one a fixed number of places down the alphabet. In cryptography, a Caesar cipher, also known as Caesar's cipher, the shift cipher, Caesar's code or Caesar shift, is one of the simplest and most widely known encryption techniques. It is a type of substitution cipher in which each letter in the plaintext is replaced by a letter some fixed number of positions down the alphabet. For example, with a left shift of 3, D would be replaced by A, E would become B, and so on. The method is named after Julius Caesar, who used it in his private correspondence.
 
 <hr>
-####The main element of the App is the Main Display table. It makes it easier to understand principal and algorithm of the encryption.  
+#### ******
+####  The main element of the App is the Main Display table. It makes it easier to understand principal and algorithm of the encryption.  
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
@@ -47,4 +48,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 1.  User can clear all the input elements and Main Display Table by pressing the Clear button.
 
 ####    Click image to zoom
-![Jest watch mode](https://github.com/vickochetkov/rct-cipher/blob/master/public/10.gif)
+![Jest watch mode](https://raw.githubusercontent.com/vickochetkov/rct-cipher/master/public/10.gif)
