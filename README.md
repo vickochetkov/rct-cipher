@@ -10,11 +10,7 @@
 
 #### The main element of the App is the Main Display table. It makes it easier to understand principal and algorithm of the encryption.
 
-<<<<<<< HEAD
 <br>
-=======
-<br>  
->>>>>>> 9013daa4f1f94325f24eb513257c8bae0e2072b9
 
 #### This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
